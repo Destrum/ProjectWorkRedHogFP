@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ProjectWorkRedHogFp",
+			"Path": "..\\Source\\ProjectWorkRedHogFp.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ProjectWorkRedHogFpEditor",
+			"Path": "..\\Source\\ProjectWorkRedHogFpEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
