@@ -5,7 +5,23 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Maps/Main_Map.umap",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/BP_PlayerCharacter.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/PlayerGameMode.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Input/MainMappingContex.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Input/Jump.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/MainMappingContex.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/Jump.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/Actions/Jump.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/Actions/IA_Move.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/Actions/IA_Jump.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Input/Actions/IA_Look.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/Jump.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/PlayerInput.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Player/MainMappingContex.uasset",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/M/Main_Map.umap",
+				"C:/Users/Roberto/Desktop/ProjectWorkRedHogFP/ProjectWorkRedHogFp/Content/Map/Main_Map.umap"
 			]
 		}
 	]

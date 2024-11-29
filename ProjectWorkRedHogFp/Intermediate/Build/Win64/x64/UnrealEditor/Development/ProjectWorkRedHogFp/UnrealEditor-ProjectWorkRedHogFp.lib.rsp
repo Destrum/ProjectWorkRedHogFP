@@ -7,7 +7,10 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\ProjectWorkRedHogFpEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\PlayerCharacter.gen.cpp.obj"
+"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\ProjectWorkRedHogFp.init.gen.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\ProjectWorkRedHogFp.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\PerModuleInline.gen.cpp.obj"
+"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\PlayerCharacter.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\Default.rc2.res"
 /OUT:"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\UnrealEditor-ProjectWorkRedHogFp.lib"
