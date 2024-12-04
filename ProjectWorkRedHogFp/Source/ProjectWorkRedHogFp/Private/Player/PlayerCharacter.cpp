@@ -7,6 +7,9 @@
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "ShaderPrintParameters.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "Perception/AISense_Sight.h"
+
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {
@@ -15,6 +18,8 @@ APlayerCharacter::APlayerCharacter()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("PlayerCamera"));
 	Camera -> SetupAttachment(RootComponent);
 	Camera -> bUsePawnControlRotation = true;
+
+	SetupstimulusSource();
 }
 
 // Called when the game starts or when spawned
@@ -81,6 +86,16 @@ void APlayerCharacter::Look(const FInputActionValue& InputValue)
 void APlayerCharacter::Jump()
 {
 	ACharacter::Jump();
+}
+
+void APlayerCharacter::SetupstimulusSource()
+{
+	StimulusSource = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("Stimulus"));
+	if (StimulusSource)
+	{
+		StimulusSource -> RegisterForSense(TSubclassOf<UAISense_Sight>());
+		StimulusSource -> RegisterWithPerceptionSystem();
+	}
 }
 
 

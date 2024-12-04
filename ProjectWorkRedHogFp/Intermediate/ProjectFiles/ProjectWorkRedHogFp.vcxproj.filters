@@ -11,6 +11,7 @@
     <None Include="..\..\Source\ProjectWorkRedHogFpEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,96 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\ProjectWorkRedHogFp.h">
       <Filter>Source\ProjectWorkRedHogFp</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\Private">
+      <UniqueIdentifier>{114C880B-CC6D-3D16-90DA-EEC146263521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectWorkRedHogFp\Private\NPC">
+      <UniqueIdentifier>{B948AAAE-9328-30DE-9BBF-847976846645}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\Private\NPC\Monster.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\Private\NPC</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\Private\Player">
+      <UniqueIdentifier>{7A2F004A-FA92-3051-B0E1-A9C624F5BFDC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\Private\Player\PlayerCharacter.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\Private\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\Public">
+      <UniqueIdentifier>{B57DBCCB-EF48-3047-A7A1-817AC4F54E94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectWorkRedHogFp\Public\NPC">
+      <UniqueIdentifier>{00D15182-0701-35C1-B704-1AF0F17BDAFB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\Public\NPC\Monster.h">
+      <Filter>Source\ProjectWorkRedHogFp\Public\NPC</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\Public\Player">
+      <UniqueIdentifier>{34207E4B-E7E9-3CDF-932B-903D54D71C40}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\Public\Player\PlayerCharacter.h">
+      <Filter>Source\ProjectWorkRedHogFp\Public\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\TP_FirstPerson">
+      <UniqueIdentifier>{AB1654E9-1920-3AB5-93E2-8475F28F8C4C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPerson.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPerson.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonCharacter.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonCharacter.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonGameMode.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonGameMode.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonPickUpComponent.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonPickUpComponent.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonProjectile.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonProjectile.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonWeaponComponent.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_FirstPerson\TP_FirstPersonWeaponComponent.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_FirstPerson</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectWorkRedHogFp\TP_ThirdPerson">
+      <UniqueIdentifier>{D7754DA1-3E66-3BC8-A9BB-4A981C37E71E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPerson.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPerson.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPersonCharacter.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPersonCharacter.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPersonGameMode.cpp">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectWorkRedHogFp\TP_ThirdPerson\TP_ThirdPersonGameMode.h">
+      <Filter>Source\ProjectWorkRedHogFp\TP_ThirdPerson</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

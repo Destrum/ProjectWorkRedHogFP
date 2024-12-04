@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectworkredhogfp\\uht\\tp_firstpersongamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\x64\\projectworkredhogfpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectworkredhogfp\\definitions.projectworkredhogfp.h",
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\source\\projectworkredhogfp\\tp_firstperson\\tp_firstpersongamemode.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectworkredhogfp\\uht\\tp_firstpersongamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

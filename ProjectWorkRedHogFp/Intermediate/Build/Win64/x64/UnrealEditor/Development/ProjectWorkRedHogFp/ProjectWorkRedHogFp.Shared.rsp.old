@@ -1,4 +1,5 @@
 /I "."
+/I "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Source\ProjectWorkRedHogFp\Private"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT"
 /I "Runtime\Engine\Classes"
 /I "Runtime\Engine\Public"
@@ -287,6 +288,7 @@
 /I "Editor\AnimationEditMode\Public"
 /I "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\UnrealEditor\Inc\ProjectWorkRedHogFp\UHT"
 /I "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Source"
+/I "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Source\ProjectWorkRedHogFp\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"

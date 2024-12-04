@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectworkredhogfp\\uht\\tp_firstpersoncharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\x64\\projectworkredhogfpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectworkredhogfp\\definitions.projectworkredhogfp.h",
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\source\\projectworkredhogfp\\tp_firstperson\\tp_firstpersoncharacter.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\users\\roberto\\desktop\\projectworkredhogfp\\projectworkredhogfp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectworkredhogfp\\uht\\tp_firstpersoncharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

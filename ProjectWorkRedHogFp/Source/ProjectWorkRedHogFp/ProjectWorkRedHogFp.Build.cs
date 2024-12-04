@@ -8,7 +8,8 @@ public class ProjectWorkRedHogFp : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] {"EnhancedInput", "Core", "CoreUObject", "Engine", "InputCore"});
+		PublicDependencyModuleNames.AddRange(new string[] {"EnhancedInput", "Core", "CoreUObject", "Engine", "InputCore", 
+																	"HeadMountedDisplay", "GameplayTasks", "NavigationSystem"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

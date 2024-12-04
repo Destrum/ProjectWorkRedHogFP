@@ -11,23 +11,26 @@ class PROJECTWORKREDHOGFP_API APlayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-protected:
+private:
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
 	class UCameraComponent* Camera;
 
 	/** MappingContext for player input. */
-	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput", meta = (AllowPrivateAccess = "true"))
 	class UInputMappingContext* InputMapping;
 	
-	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput", meta =(AllowPrivateAccess = "true"))
 	class UInputAction* MoveAction;
 
-	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput", meta =(AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 	
-	UPROPERTY(EditAnywhere, Category = "EnhancedInput")
+	UPROPERTY(EditAnywhere, Category = "EnhancedInput", meta =(AllowPrivateAccess = "true"))
 	class UInputAction* JumpAction;
+
+	
+
 	
 public:
 	// Sets default values for this character's properties
@@ -48,5 +51,9 @@ protected:
 	void Move(const FInputActionValue& InputValue);
 	void Look(const FInputActionValue& InputValue);
 	void Jump();
+	
+private:
+	class UAIPerceptionStimuliSourceComponent* StimulusSource;
+	void SetupstimulusSource();
 
 };
