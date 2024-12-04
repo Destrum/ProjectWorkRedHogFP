@@ -7,7 +7,7 @@
 #include "NPC/Monster.h"
 #include "NPC/Monster_AIController.h"
 
-UBTTask_FindPathPoint::UBTTask_FindPathPoint(FObjectInitializer const& ObjectInitializer)
+UBTTask_FindPathPoint::UBTTask_FindPathPoint(FObjectInitializer const& ObjectInitializer) : UBTTask_BlackboardBase(ObjectInitializer)
 {
 	NodeName = "Find Path Point";
 }

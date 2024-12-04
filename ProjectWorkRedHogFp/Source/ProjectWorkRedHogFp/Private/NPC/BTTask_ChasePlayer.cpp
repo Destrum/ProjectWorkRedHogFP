@@ -7,7 +7,7 @@
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "NPC/Monster_AIController.h"
 
-UBTTask_ChasePlayer::UBTTask_ChasePlayer(FObjectInitializer const& ObjectInitializer)
+UBTTask_ChasePlayer::UBTTask_ChasePlayer(FObjectInitializer const& ObjectInitializer) : UBTTask_BlackboardBase(ObjectInitializer)
 {
 	NodeName = "Chase Player";
 }
