@@ -38,6 +38,7 @@
 /NOIMPLIB
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\ProjectWorkRedHogFpEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTService_ChangeSpeed.gen.cpp.obj"
+"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTService_IsPlayerInKillRange.gen.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_ChasePlayer.gen.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_FindPathPoint.gen.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_FindPlayerLocation.gen.cpp.obj"
@@ -55,6 +56,7 @@
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\PlayerCharacter.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\PerModuleInline.gen.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTService_ChangeSpeed.cpp.obj"
+"C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTService_IsPlayerInKillRange.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_ChasePlayer.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_FindPathPoint.cpp.obj"
 "C:\Users\Roberto\Desktop\ProjectWorkRedHogFP\ProjectWorkRedHogFp\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectWorkRedHogFp\BTTask_FindPlayerLocation.cpp.obj"
