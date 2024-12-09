@@ -8,7 +8,7 @@
 // Sets default values
 AMonsterTriggerBox::AMonsterTriggerBox()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	SetRootComponent(Mesh);
@@ -19,7 +19,6 @@ AMonsterTriggerBox::AMonsterTriggerBox()
 // Called when the game starts or when spawned
 void AMonsterTriggerBox::BeginPlay()
 {
-	
 	Super::BeginPlay();
 	if (!Box) { return; }
 	Box->OnComponentBeginOverlap.AddDynamic(this, &AMonsterTriggerBox::HandleBeginOverlap);
@@ -30,31 +29,27 @@ void AMonsterTriggerBox::BeginPlay()
 void AMonsterTriggerBox::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void AMonsterTriggerBox::HandleBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+                                            UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+                                            const FHitResult& SweepResult)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Overlap"));
 
-	if (OtherActor ->ActorHasTag("Player"))
+	if (OtherActor->ActorHasTag("Player"))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Overlapped with player"));
 	}
-
 }
 
 void AMonsterTriggerBox::HandleEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+                                          UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	UE_LOG(LogTemp, Warning, TEXT("End Overlap"));
 
-	if (OtherActor -> ActorHasTag("Player"))
+	if (OtherActor->ActorHasTag("Player"))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Ended Overlap with player"));
 	}
-
 }
-
-

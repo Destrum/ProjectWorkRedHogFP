@@ -9,15 +9,18 @@
 #include "ShaderPrintParameters.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "Perception/AISense_Sight.h"
+#include "Player/DebugUI.h"
+#include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("PlayerCamera"));
-	Camera -> SetupAttachment(RootComponent);
-	Camera -> bUsePawnControlRotation = true;
+	Camera->SetupAttachment(RootComponent);
+	Camera->bUsePawnControlRotation = true;
 
 	SetupstimulusSource();
 }
@@ -26,14 +29,19 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	APlayerController* PlayerController = GetController<APlayerController>();
+	check(PlayerController);
+
+	PlayerUI = CreateWidget<UDebugUI>(PlayerController, PlayerUIClass);
+	check(PlayerUI);
+	PlayerUI->AddToPlayerScreen();
+	PlayerUI->UIUpdate(false);
 }
 
 // Called every frame
 void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -42,18 +50,19 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
 	{
-		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer:: GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<
+			UEnhancedInputLocalPlayerSubsystem>(
 			PlayerController->GetLocalPlayer()))
 		{
 			Subsystem->AddMappingContext(InputMapping, 0);
 		}
 	}
-	
+
 	if (UEnhancedInputComponent* Input = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		Input -> BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move );
-		Input -> BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look );
-		Input -> BindAction(JumpAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Jump );
+		Input->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
+		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
+		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Jump);
 	}
 }
 
@@ -61,10 +70,10 @@ void APlayerCharacter::Move(const FInputActionValue& InputValue)
 {
 	FVector2D InputVector = InputValue.Get<FVector2D>();
 	if (IsValid(Controller))
-	{	
+	{
 		const FRotator Rotation = Controller->GetControlRotation();
-		const FRotator YawRotation(0 , Rotation.Yaw, 0);
-		
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+
 		const FVector FowardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
@@ -93,12 +102,7 @@ void APlayerCharacter::SetupstimulusSource()
 	StimulusSource = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("Stimulus"));
 	if (StimulusSource)
 	{
-		StimulusSource -> RegisterForSense(TSubclassOf<UAISense_Sight>());
-		StimulusSource -> RegisterWithPerceptionSystem();
+		StimulusSource->RegisterForSense(TSubclassOf<UAISense_Sight>());
+		StimulusSource->RegisterWithPerceptionSystem();
 	}
 }
-
-
-
-
-

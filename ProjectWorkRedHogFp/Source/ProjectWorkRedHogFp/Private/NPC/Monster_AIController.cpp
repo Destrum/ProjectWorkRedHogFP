@@ -11,7 +11,7 @@
 #include "Player/PlayerCharacter.h"
 
 
-AMonster_AIController::AMonster_AIController(FObjectInitializer const& ObjectInitializer)
+AMonster_AIController::AMonster_AIController(const FObjectInitializer& ObjectInitializer)
 {
 	SetupPerceptionSystem();
 }
@@ -20,13 +20,15 @@ void AMonster_AIController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
 	if (AMonster* const monster = Cast<AMonster>(InPawn)) // se il cast ha successo prende il behaviortree
+	{
 		if (UBehaviorTree* const tree = monster->GetBehaviorTree())
 		{
 			UBlackboardComponent* b;
 			UseBlackboard(tree->BlackboardAsset, b); // Fa in modo che l'AI usa uno specifico Blackboard asset
-			Blackboard=b;
+			Blackboard = b;
 			RunBehaviorTree(tree);
 		}
+	}
 }
 
 void AMonster_AIController::SetupPerceptionSystem()
@@ -35,26 +37,36 @@ void AMonster_AIController::SetupPerceptionSystem()
 	if (SightConfig)
 	{
 		SetPerceptionComponent(*CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent")));
-		SightConfig -> SightRadius = 500.f;
-		SightConfig -> LoseSightRadius = SightConfig -> SightRadius + 25.f;
-		SightConfig -> PeripheralVisionAngleDegrees = 90.f;
-		SightConfig -> SetMaxAge(5.f);
-		SightConfig -> AutoSuccessRangeFromLastSeenLocation = 520.f;
-		SightConfig -> DetectionByAffiliation.bDetectEnemies = true;
-		SightConfig -> DetectionByAffiliation.bDetectFriendlies = true;
-		SightConfig -> DetectionByAffiliation.bDetectNeutrals = true;
-		
-		GetPerceptionComponent() -> SetDominantSense(*SightConfig ->GetSenseImplementation());
-		GetPerceptionComponent() -> OnTargetPerceptionUpdated.AddDynamic(
-		this, &AMonster_AIController::OnTargetDetected);
-		GetPerceptionComponent() -> ConfigureSense(*SightConfig);
+		SightConfig->SightRadius = 500.f;
+		SightConfig->LoseSightRadius = SightConfig->SightRadius + 25.f;
+		SightConfig->PeripheralVisionAngleDegrees = 90.f;
+		SightConfig->SetMaxAge(5.f);
+		SightConfig->AutoSuccessRangeFromLastSeenLocation = 520.f;
+		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+
+		GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
+		GetPerceptionComponent()->OnTargetPerceptionUpdated.AddDynamic(
+			this, &AMonster_AIController::OnTargetDetected);
+		GetPerceptionComponent()->ConfigureSense(*SightConfig);
 	}
 }
 
-void AMonster_AIController::OnTargetDetected(AActor* Actor, FAIStimulus const Stimulus)
+void AMonster_AIController::OnTargetDetected(AActor* Actor, const FAIStimulus Stimulus)
 {
-	if (auto* const Ch = Cast<APlayerCharacter>(Actor) )
+	if (auto* const Ch = Cast<APlayerCharacter>(Actor))
 	{
-		GetBlackboardComponent() -> SetValueAsBool("CanSeePlayer", Stimulus.WasSuccessfullySensed());
+		GetBlackboardComponent()->SetValueAsBool("CanSeePlayer", Stimulus.WasSuccessfullySensed());
+		if (Stimulus.WasSuccessfullySensed())
+		{
+			APlayerCharacter* const Player = Cast<APlayerCharacter>(Actor);
+			if (!Player)
+			{
+				return;
+			}
+
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Player in Vista"));
+		}
 	}
 }
