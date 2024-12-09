@@ -5,9 +5,11 @@
 
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
-
+#include "Player/DebugUI.h"
+#include "Blueprint/UserWidget.h"
 #include "NPC/Monster.h"
 #include "Perception/AIPerceptionComponent.h"
+
 #include "Player/PlayerCharacter.h"
 
 
@@ -37,7 +39,7 @@ void AMonster_AIController::SetupPerceptionSystem()
 	if (SightConfig)
 	{
 		SetPerceptionComponent(*CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent")));
-		SightConfig->SightRadius = 500.f;
+		SightConfig->SightRadius = SightRadiusVariable;
 		SightConfig->LoseSightRadius = SightConfig->SightRadius + 25.f;
 		SightConfig->PeripheralVisionAngleDegrees = 90.f;
 		SightConfig->SetMaxAge(5.f);
@@ -58,14 +60,19 @@ void AMonster_AIController::OnTargetDetected(AActor* Actor, const FAIStimulus St
 	if (auto* const Ch = Cast<APlayerCharacter>(Actor))
 	{
 		GetBlackboardComponent()->SetValueAsBool("CanSeePlayer", Stimulus.WasSuccessfullySensed());
+
+		if (UUserWidget* UserWidget = Ch->DebugUI)
+		// casto la DebugUI dal player character che e' assegnata nel player character
+		{
+			if (UDebugUI* const UIUpdate = Cast<UDebugUI>(UserWidget)) // casto la UI
+			{
+				UIUpdate->UIUpdate(Stimulus.WasSuccessfullySensed());
+				// Passo alla UI il bool che indica se il player character e' in vista o no e determina il comportamento nella funzione
+				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Cambio UI"));
+			}
+		}
 		if (Stimulus.WasSuccessfullySensed())
 		{
-			APlayerCharacter* const Player = Cast<APlayerCharacter>(Actor);
-			if (!Player)
-			{
-				return;
-			}
-
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Player in Vista"));
 		}
 	}

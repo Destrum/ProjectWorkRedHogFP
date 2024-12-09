@@ -43,9 +43,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<class UDebugUI> PlayerUIClass;
+	TSubclassOf<class UDebugUI> DebugUIClass; // faccio in modo che dal viewport del player si possa assegnare il widget
 	UPROPERTY()
-	class UDebugUI* PlayerUI;
+	class UDebugUI* DebugUI;
 
 protected:
 	void Move(const FInputActionValue& InputValue);

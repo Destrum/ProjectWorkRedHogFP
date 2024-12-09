@@ -22,17 +22,20 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UBehaviorTree* GetBehaviorTree() const;		// crea il get per BehaviorTree
+	UBehaviorTree* GetBehaviorTree() const; // crea il get per BehaviorTree
 
 	APatrolPath* GetPatrolPath() const;
-	
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta = (AllowPrivateAccess = true))
-	UBehaviorTree* Tree;	//crea la variabile BehaviorTree
+	UBehaviorTree* Tree; //crea la variabile BehaviorTree
 
 	UPROPERTY(editAnywhere, BlueprintReadWrite, Category="AI", meta = (AllowPrivateAccess = true))
 	APatrolPath* PatrolPath;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="AI", meta = (AllowPrivateAccess = true))
+	float SightRadiusDebug;
 };

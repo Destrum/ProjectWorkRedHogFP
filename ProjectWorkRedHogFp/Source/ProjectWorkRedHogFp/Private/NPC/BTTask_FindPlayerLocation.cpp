@@ -38,12 +38,13 @@ EBTNodeResult::Type UBTTask_FindPlayerLocation::ExecuteTask(UBehaviorTreeCompone
 
 
 					if (AMonster_AIController* const cont = Cast<AMonster_AIController>(OwnerComp.GetAIOwner()))
+					//prendo il controller del mostro
 					{
-						if (AActor* const Monster = Cast<AMonster>(cont->GetPawn()))
+						if (AActor* const Monster = Cast<AMonster>(cont->GetPawn())) // prendo l'actor del mostro
 						{
 							FVector Start = Monster->GetActorLocation();
 							FVector End = PlayerLocation;
-							//crea una debug line dal mostro al punto della navmesh che insegue
+							//crea una debug line dal mostro al punto della navmesh che il mostro segue
 							DrawDebugLine(Monster->GetWorld(), Start, End, FColor::Red, false, 0.5f, 0, 1.0f);
 						}
 					}

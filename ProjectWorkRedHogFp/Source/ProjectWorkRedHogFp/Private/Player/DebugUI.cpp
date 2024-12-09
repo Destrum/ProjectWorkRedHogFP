@@ -8,7 +8,7 @@
 void UDebugUI::UIUpdate(bool CanSeePlayer)
 {
 	if (!DebugText) { return; }
-	if (CanSeePlayer)
+	if (CanSeePlayer) // in base al bool passato scrive se il mostro sta cercando il player o e' in patrolling
 	{
 		DebugText->SetText(FText::FromString("Current State: ChasingPlayer"));
 	}

@@ -14,16 +14,20 @@ UCLASS()
 class PROJECTWORKREDHOGFP_API AMonster_AIController : public AAIController
 {
 	GENERATED_BODY()
+
 public:
-	explicit AMonster_AIController(FObjectInitializer const& ObjectInitializer); // Constructor
+	explicit AMonster_AIController(const FObjectInitializer& ObjectInitializer); // Constructor
+
+	UPROPERTY(visibleAnywhere, BlueprintReadWrite)
+	float SightRadiusVariable = 500.f;
+
 protected:
 	virtual void OnPossess(APawn* InPawn) override; // get blackboard component
 private:
-	
 	class UAISenseConfig_Sight* SightConfig;
 
 	void SetupPerceptionSystem();
-	
+
 	UFUNCTION()
-	void OnTargetDetected(AActor* Actor, FAIStimulus const Stimulus);
+	void OnTargetDetected(AActor* Actor, const FAIStimulus Stimulus);
 };

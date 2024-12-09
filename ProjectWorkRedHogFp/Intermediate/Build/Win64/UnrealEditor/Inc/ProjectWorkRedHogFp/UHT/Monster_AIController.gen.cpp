@@ -95,7 +95,19 @@ struct Z_Construct_UClass_AMonster_AIController_Statics
 		{ "ModuleRelativePath", "Public/NPC/Monster_AIController.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SightRadiusVariable_MetaData[] = {
+		{ "Category", "Monster_AIController" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Constructor\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NPC/Monster_AIController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Constructor" },
+#endif
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SightRadiusVariable;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMonster_AIController_OnTargetDetected, "OnTargetDetected" }, // 2511736265
@@ -106,6 +118,11 @@ struct Z_Construct_UClass_AMonster_AIController_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMonster_AIController_Statics::NewProp_SightRadiusVariable = { "SightRadiusVariable", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMonster_AIController, SightRadiusVariable), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SightRadiusVariable_MetaData), NewProp_SightRadiusVariable_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMonster_AIController_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMonster_AIController_Statics::NewProp_SightRadiusVariable,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMonster_AIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMonster_AIController_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AAIController,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectWorkRedHogFp,
@@ -117,11 +134,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AMonster_AIController_S
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_AMonster_AIController_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_AMonster_AIController_Statics::PropPointers),
 	0,
 	0x009002A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMonster_AIController_Statics::Class_MetaDataParams), Z_Construct_UClass_AMonster_AIController_Statics::Class_MetaDataParams)
@@ -146,10 +163,10 @@ AMonster_AIController::~AMonster_AIController() {}
 struct Z_CompiledInDeferFile_FID_Users_Roberto_Desktop_ProjectWorkRedHogFP_ProjectWorkRedHogFp_Source_ProjectWorkRedHogFp_Public_NPC_Monster_AIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMonster_AIController, AMonster_AIController::StaticClass, TEXT("AMonster_AIController"), &Z_Registration_Info_UClass_AMonster_AIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMonster_AIController), 972590761U) },
+		{ Z_Construct_UClass_AMonster_AIController, AMonster_AIController::StaticClass, TEXT("AMonster_AIController"), &Z_Registration_Info_UClass_AMonster_AIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMonster_AIController), 24140000U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Roberto_Desktop_ProjectWorkRedHogFP_ProjectWorkRedHogFp_Source_ProjectWorkRedHogFp_Public_NPC_Monster_AIController_h_1946247664(TEXT("/Script/ProjectWorkRedHogFp"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Roberto_Desktop_ProjectWorkRedHogFP_ProjectWorkRedHogFp_Source_ProjectWorkRedHogFp_Public_NPC_Monster_AIController_h_1189285099(TEXT("/Script/ProjectWorkRedHogFp"),
 	Z_CompiledInDeferFile_FID_Users_Roberto_Desktop_ProjectWorkRedHogFP_ProjectWorkRedHogFp_Source_ProjectWorkRedHogFp_Public_NPC_Monster_AIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Roberto_Desktop_ProjectWorkRedHogFP_ProjectWorkRedHogFp_Source_ProjectWorkRedHogFp_Public_NPC_Monster_AIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

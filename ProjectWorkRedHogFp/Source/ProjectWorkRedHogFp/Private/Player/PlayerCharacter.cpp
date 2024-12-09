@@ -32,10 +32,12 @@ void APlayerCharacter::BeginPlay()
 	APlayerController* PlayerController = GetController<APlayerController>();
 	check(PlayerController);
 
-	PlayerUI = CreateWidget<UDebugUI>(PlayerController, PlayerUIClass);
-	check(PlayerUI);
-	PlayerUI->AddToPlayerScreen();
-	PlayerUI->UIUpdate(false);
+	DebugUI = CreateWidget<UDebugUI>(PlayerController, DebugUIClass);
+	if (DebugUI)
+	{
+		DebugUI->AddToPlayerScreen(); // mette la UI nello schermo del player
+		DebugUI->UIUpdate(false); // inizializza UIUpdate
+	}
 }
 
 // Called every frame
